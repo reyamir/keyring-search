@@ -237,9 +237,9 @@ unsafe fn get_last_written(last_written: FILETIME) -> HumanTime {
         hour: system_time.wHour,
         minute: system_time.wMinute,
         second: system_time.wSecond,
-        day_of_week: DAYS[system_time.wDayOfWeek as usize - 1].to_string(),
+        day_of_week: system_time.wDayOfWeek,
         day: system_time.wDay,
-        month: MONTHS[system_time.wMonth as usize - 1].to_string(),
+        month: system_time.wMonth,
         year: system_time.wYear,
     }
 }
